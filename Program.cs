@@ -34,12 +34,6 @@ class Sierpinski : Form
         } else if (iteration > 1)
         {
             iteration--;
-            PointF[] newPoints = {
-                new PointF((points[0].X + points[1].X) / 2, (points[0].Y + points[1].Y) / 2),
-                new PointF( (points[1].X + points[2].X) / 2, (points[1].Y + points[2].Y) / 2 ),
-                new PointF( (points[0].X + points[2].X) / 2, (points[0].Y + points[2].Y) / 2 )
-            };
-
             // Subtriangles here
             PointF[] subtri1 = {
                 new PointF(points[0].X, points[0].Y),
@@ -48,8 +42,8 @@ class Sierpinski : Form
             };
 
             PointF[] subtri2 = {
+				new PointF(points[1].X, points[1].Y),
                 new PointF( (points[0].X + points[1].X) / 2, (points[0].Y + points[1].Y) / 2 ),
-                new PointF(points[1].X, points[1].Y),
                 new PointF( (points[2].X + points[1].X) / 2, (points[2].Y + points[1].Y) / 2 )
             };
 
